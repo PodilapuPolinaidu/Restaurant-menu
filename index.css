@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.orderDetails {
+  width: 20%;
+  padding: 20px;
+}
+
+.items {
+  width: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 8px 8px;
+}
+
+.imgContainer {
+  text-align: center;
+  padding: 8px 8px;
+}
+
+.imgContainer img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+  padding: 3px;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2e8b57;
+  text-align: center;
+}
+
+.description {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 8px 8px;
+}
+
+.btnContainer {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  background-color: #4db8ff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1e90ff;
+}
+
+.type {
+  font-size: 0.85rem;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.bottom {
+  display: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.orderInfo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.orders {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 10px 10px;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.order-header h3 {
+  color: #333;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.order-id {
+  color: #007bff;
+}
+
+.token-id {
+  color: #28a745;
+}
+
+.order-meta {
+  text-align: right;
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.order-table th,
+.order-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-table thead tr {
+  background-color: #007bff;
+  color: white;
+}
+
+.total-bill {
+  text-align: right;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.addedOrder {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 400px;
+  background: #f9fcff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.addedOrderDescription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addedOrderDescription h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.quantity {
+  font-size: 0.95rem;
+  background-color: #e0f7fa;
+  color: #00796b;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.amount {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.amount span {
+  font-weight: bold;
+  color: #2e8b57;
+}
+
+.addedOrderButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.addedOrderButtons button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add,
+.decrease {
+  background-color: #4db8ff;
+  color: white;
+}
+
+.decrease:hover,
+.add:hover {
+  background-color: #1e90ff;
+}
+
+.btnRemove {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.btnRemove:hover {
+  background-color: #ff4c4c;
+}
+
+#amountDetails {
+  display: none;
+}
+
+#price {
+  font-weight: bold;
+  font-size: large;
+}
+
+table {
+  width: 100%;
+  padding: 20px;
+}
+
+tr {
+  margin-top: 10px;
+}
+
+th {
+  text-align: start;
+}
