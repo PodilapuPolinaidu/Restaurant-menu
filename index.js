@@ -284,8 +284,8 @@ function removeQuantity(id) {
     add.disabled = true;
   } else {
     let newObj = { ...item, quantity: count };
-    let idx = addedProducts.findIndex((item) => item.id == id);
-    addedProducts.splice(idx, 1, newObj);
+    let index = addedProducts.findIndex((item) => item.id == id);
+    addedProducts.splice(index, 1, newObj);
     renderAddedItems(addedProducts);
   }
 }
