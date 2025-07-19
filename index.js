@@ -239,7 +239,6 @@ function renderAddedItems(items) {
 
 function removeItem(id) {
   let removeEle = btns[id - 1];
-  console.log(removeEle);
   let idx = addedProducts.findIndex((item) => item.id == id);
   addedProducts.splice(idx, 1);
   removeEle.innerText = "Add +";
@@ -264,7 +263,6 @@ function getPrice(items) {
     amount += parseInt(price);
   }
   price.innerText = `₹ ${amount}.00`;
-  document.querySelector(".price").innerText = `₹ ${amount}.00`;
 }
 
 function addQuantity(id) {
@@ -293,11 +291,11 @@ function removeQuantity(id) {
 }
 
 let showOrders = {};
-let table = document.getElementById("table");
 let tokenNum = 1;
 function showOrderLogs() {
   const date = new Date();
   let day = date.getDate();
+  let validDay = day <= 9 ? `0${day}` : day;
   let month = date.getMonth();
   let validMonth = month <= 9 ? `0${month}` : month;
   let year = date.getFullYear();
@@ -318,6 +316,17 @@ function showOrderLogs() {
     item.style.color = "white";
   });
 
+  showOrderLogsAfter(
+    validDay,
+    validMonth,
+    year,
+    validHours,
+    validMinute,
+    validSecond
+  );
+}
+
+function showOrderLogsAfter(day, month, year, hours, minute, second) {
   for (const token in showOrders) {
     document.getElementById("orderLogs").innerHTML += `
   <div class="orders">
@@ -326,8 +335,8 @@ function showOrderLogs() {
       🏷️ Token Number: <span class="token-id">#${tokenNum}</span>
     </h3>
     <div class="order-meta">
-      📅 <strong>Date:</strong> ${day}/${validMonth}/${year}<br />
-      ⏰ <strong>Time:</strong> ${validHours}:${validMinute}:${validSecond}
+      📅 <strong>Date:</strong> ${day}/${month}/${year}<br />
+      ⏰ <strong>Time:</strong> ${hours}:${minute}:${second}
     </div>
   </div>
 
@@ -339,7 +348,6 @@ function showOrderLogs() {
 </div>
 `;
     let tbody = document.querySelector(`.tbody${tokenNum}`);
-
     tbody.innerHTML = "";
     let count = 1;
     showOrders[token].map((item) => {
@@ -352,9 +360,14 @@ function showOrderLogs() {
         </tr>
     `;
     });
+    tokenNum++;
   }
-  tokenNum++;
   addedProducts.length = 0;
+  products.map((item) => {
+    if (item.quantity > 1) {
+      item.quantity = 1;
+    }
+  });
 }
 
 function getTotal(items) {
