@@ -332,7 +332,7 @@ function showOrderLogsAfter(day, month, year, hours, minute, second) {
   <div class="orders">
   <div class="order-header">
     <h3>
-      🏷️ Token Number: <span class="token-id">#${tokenNum}</span>
+      🏷️ Token Number: <span class="token-id">#${day}${month}${year}${tokenNum}</span>
     </h3>
     <div class="order-meta">
       📅 <strong>Date:</strong> ${day}/${month}/${year}<br />
